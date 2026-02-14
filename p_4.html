@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="новый 2.css">
+		</head>
+	<body>
+		<main>
+			<div class="form-container">
+				<h2>🚗 Форма заявки на аренду автомобиля</h2>
+				<form action="/submit_order" method="post">
+					<label for="name">Ваше имя:</label>
+					<input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+					<label for="email">Ваш Email:</label>
+					<input type="email" id="email" name="email" placeholder="example@mail.com" required>
+					<label for="car">Выберите автомобиль:</label>
+					<select id="car" name="car">
+						<optgroup label="Эконом">
+							<option value="lada">Lada Granta</option>
+							<option value="hyundai">Hyundai Solaris</option>
+						</optgroup>
+						<optgroup label="Комфорт">
+							<option value="kia">Kia Rio</option>
+							<option value="skoda">Skoda Octavia</option>
+						</optgroup>
+						<optgroup label="Внедорожники">
+							<option value="renault">Renault Duster</option>
+							<option value="toyota">Toyota RAV4</option>
+						</optgroup>
+					</select>
+					<label for="comment">Дополнительные пожелания:</label>
+					<textarea id="comment" name="comment" rows="4" placeholder="Напишите здесь свои пожелания..."></textarea>
+					<button type="submit">Отправить заявку</button>
+					<button type="reset">Очистить форму</button>
+				</form>
+				<p><i>Использовано элементов: text, email, select (с optgroup), textarea, submit, reset (всего 6 типов)</i></p>
+			</div>
+		</main>
+	</body>
+</html>
