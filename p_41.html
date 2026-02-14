@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="новый 2.css">
+		</head>
+	<body>
+		<main>
+			<div class="form-container">
+				<h2>Анкета водителя</h2>
+				<form action="/submit_profile" method="post" enctype="multipart/form-data">
+					<input type="hidden" name="form_id" value="driver_profile_2024">
+					<label for="login">Логин:</label>
+					<input type="text" id="login" name="login" placeholder="Придумайте логин" required>
+					<label for="pass">Пароль:</label>
+					<input type="password" id="pass" name="password" placeholder="********" required>
+					<label>Ваш пол:</label>
+					<div class="radio-group">
+						<input type="radio" id="male" name="gender" value="male" checked>
+						<label for="male" style="display:inline;">Мужской</label>
+						<input type="radio" id="female" name="gender" value="female">
+						<label for="female" style="display:inline;">Женский</label>
+					</div>
+					<label>Какими навыками владеете?</label><br>
+					<div class="radio-group">
+						<input type="checkbox" id="skill1" name="skills[]" value="mechanic">
+						<label for="skill1" style="display:inline;">Знаю устройство автомобиля</label><br>
+						<input type="checkbox" id="skill2" name="skills[]" value="english">
+						<label for="skill2" style="display:inline;">Говорю на английском</label><br>
+						<input type="checkbox" id="skill3" name="skills[]" value="child">
+						<label for="skill3" style="display:inline;">Могу установить детское кресло</label><br>
+					</div>
+					<label for="photo">Загрузите фото водительских прав:</label>
+					<input type="file" id="photo" name="license_photo" accept="image/*">
+					<button type="submit">Отправить анкету</button>
+					<button type="reset">Очистить</button>
+				</form>
+				<p><i>Использовано элементов: hidden, password, radio, checkbox, file, submit (всего 6 типов)</i></p>
+			</div>
+		</main>
+	</body>
+</html>
