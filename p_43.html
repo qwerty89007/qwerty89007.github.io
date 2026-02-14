@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="новый 2.css">
+		</head>
+	<body>
+		<main>
+			<div class="form-container">
+				<h2>Регистрация в каршеринге</h2>
+				<form action="/register" method="post">
+					<fieldset>
+						<legend>Личные данные</legend>						
+						<label for="fullname">ФИО полностью:</label>
+						<input type="text" id="fullname" name="fullname" placeholder="Иванов Иван Иванович" required>						
+						<label for="birthday">Дата рождения (date):</label>
+						<input type="date" id="birthday" name="birthday">						
+						<label for="phone">Номер телефона (tel):</label>
+						<input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67" pattern="\+7\s?[0-9]{10}" title="Формат: +7 9991234567">
+					</fieldset>
+					<fieldset>
+						<legend>Водительские данные</legend>						
+						<label for="experience">Стаж вождения (число лет):</label>
+						<input type="number" id="experience" name="experience" min="0" max="50" value="1">					
+						<label for="cars">Какими автомобилями уже управляли? (можно выбрать несколько, зажми Ctrl)</label>
+						<select id="cars" name="cars[]" multiple size="4">
+							<option value="lada">Lada</option>
+							<option value="toyota">Toyota</option>
+							<option value="bmw">BMW</option>
+							<option value="mercedes">Mercedes</option>
+							<option value="ford">Ford</option>
+						</select>
+						<input type="checkbox" id="agree" name="agree" required>
+						<label for="agree" style="display:inline;">Я соглашаюсь с условиями аренды</label>
+					</fieldset>
+					<button type="submit">Зарегистрироваться</button>
+					<button type="reset">Сбросить</button>
+				</form>
+				<p><i>Использовано элементов: text, date, tel, number, select (multiple), checkbox (всего 6 типов)</i></p>
+			</div>
+		</main>
+	</body>
+</html>
