@@ -1,0 +1,92 @@
+<html>
+<head>
+    <title>Лабораторная работа 3: Таблицы и списки</title>
+    <style>
+        /* CSS для оформления таблицы */
+        .schedule-table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse; /* Убираем двойные рамки */
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .schedule-table th {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+        .schedule-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        /* Чередование цвета строк (зебра) */
+        .schedule-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .schedule-table tr:hover {
+            background-color: #f1f1f1;
+        }
+        .schedule-table caption {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+<table class="schedule-table">
+    <caption>Моё расписание на неделю</caption>
+    <thead>
+        <tr>
+            <th>День недели</th>
+            <th>Предмет</th>
+            <th>Время</th>
+            <th>Аудитория</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Понедельник</td>
+            <td>УП.01.04</td>
+            <td>9:00 - 14:35</td>
+            <td>230</td>
+        </tr>
+        <tr>
+            <td>Вторник</td>
+            <td>УП.01.04</td>
+            <td>9:00 - 14:35</td>
+            <td>226</td>
+        </tr>
+        <tr>
+            <td>Среда</td>
+            <td>УП.01.04</td>
+            <td>9:00 - 14:35</td>
+            <td>230</td>
+        </tr>
+        <tr>
+            <td>Четверг</td>
+            <td>УП.01.04</td>
+            <td>9:00 - 14:35</td>
+            <td>226</td>
+        </tr>
+        <tr>
+            <td>Пятница</td>
+            <td>УП.01.04</td>
+            <td>9:00 - 14:35</td>
+            <td>230</td>
+        </tr>
+		<tr>
+			<td>Суббота</td>
+			<td>УП.01.04</td>
+			<td>9:00 - 14:35</td>
+			<td>226</td>
+		</tr>
+    </tbody>
+</table>
+</body>
+</html>
