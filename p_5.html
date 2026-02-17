@@ -3,19 +3,12 @@
     <meta charset="utf-8">
     <title>Лабораторная работа 5: Фреймы</title>
 </head>
-    <!-- Вместо body используется frameset -->
     <frameset rows="100, *">
-        <!-- Верхний фрейм (заголовок) - высота 100 пикселей -->
         <frame src="top.html" name="header_frame" scrolling="no" noresize>
-        
-        <!-- Нижняя часть - делим на две колонки -->
         <frameset cols="200, *">
-            <!-- Левый фрейм (меню) - ширина 200 пикселей -->
             <frame src="menu.html" name="menu_frame" scrolling="auto">
-            <!-- Правый фрейм (информационный) - занимает оставшееся место -->
             <frame src="content1.html" name="info_frame">
         </frameset>
-        <!-- Для браузеров, которые не поддерживают фреймы -->
         <noframes>
             <body>
                 <p>Ваш браузер не поддерживает фреймы. Пожалуйста, обновите браузер.</p>
