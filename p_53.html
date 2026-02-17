@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Главная</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #fff;
+        }
+        h2 {
+            color: #667eea;
+        }
+        .buttons {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            background-color: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        button:hover {
+            background-color: #764ba2;
+        }
+        .content-box {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Добро пожаловать!</h2>
+    <!-- Кнопки для навигации внутри информационного фрейма -->
+    <div class="buttons">
+        <p><b>Навигация внутри этого фрейма:</b></p>
+        <button onclick="window.location.href='content1.html'">Главная</button>
+        <button onclick="window.location.href='content2.html'">Галерея</button>
+    </div>
+    <div class="content-box">
+        <h3>О фреймах</h3>
+        <p>Фреймы позволяют загружать в окно браузера несколько HTML-документов одновременно. Каждый фрейм работает независимо.</p>
+        <p>В этой работе:</p>
+        <ul>
+            <li>Сверху — заголовок</li>
+            <li>Слева — меню</li>
+            <li>Справа — информационная область (этот фрейм)</li>
+        </ul>
+        <p>Можно переключать страницы как через меню слева, так и через кнопки на этой странице.</p>
+    </div>
+</body>
+</html>
