@@ -13,52 +13,64 @@
         }
         h3 {
             text-align: center;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
-        .info {
-            background-color: rgba(255,255,255,0.2);
+        .coordinates-info {
+            background: rgba(255,255,255,0.2);
             padding: 15px;
             border-radius: 10px;
             margin-top: 20px;
             font-size: 14px;
         }
+        code {
+            background: rgba(0,0,0,0.3);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
     </style>
 </head>
 <body>
-    <h3>Навигационное меню</h3>
-    <img src="https://via.placeholder.com/260x300/ffffff/333333?text=Нажми+на+иконку" 
-         alt="Навигационное меню" 
+    <h3>🎯 Меню с картой изображений</h3>
+    
+    <!-- Используем реальное изображение с иконками -->
+    <img src="https://static.thenounproject.com/png/3476173-200.png" 
+         alt="Иконки навигации" 
          usemap="#navmap" 
-         width="260" 
+         width="300" 
          height="300"
-         style="display: block; margin: 0 auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+         style="display: block; margin: 0 auto; background: white; border-radius: 10px; padding: 10px;">
+    
     <map name="navmap">
+        <!-- Иконка фото (верхний левый угол) -->
         <area shape="rect" coords="20,20,120,120" 
               href="photo.html" target="info_frame" 
-              alt="Фотографии" title="Перейти к фотографиям">
-        <area shape="circle" coords="190,70,50" 
+              alt="Фото" title="Перейти к фотографиям">
+        
+        <!-- Иконка видео (верхний правый угол) -->
+        <area shape="circle" coords="220,70,40" 
               href="video.html" target="info_frame" 
               alt="Видео" title="Перейти к видео">
-        <area shape="rect" coords="30,150,230,250" 
+        
+        <!-- Иконка аудио (нижняя часть) -->
+        <area shape="rect" coords="70,180,230,280" 
               href="audio_gif.html" target="info_frame" 
               alt="Аудио и GIF" title="Перейти к аудио и GIF">
     </map>
     
-    <div class="info">
-        <p><b>Как пользоваться:</b></p>
-        <p>Верхний левый квадрат — фотографии</p>
-        <p>Круг справа — видео</p>
-        <p>Нижний прямоугольник — аудио и GIF</p>
-        <p>Нажимай на области картинки!</p>
+    <div class="coordinates-info">
+        <h4>📐 Координаты областей:</h4>
+        <p><b>Фото (прямоугольник):</b> <code>coords="20,20,120,120"</code> — левый верхний угол (20,20), правый нижний (120,120)</p>
+        <p><b>Видео (круг):</b> <code>coords="220,70,40"</code> — центр (220,70), радиус 40</p>
+        <p><b>Аудио/GIF (прямоугольник):</b> <code>coords="70,180,230,280"</code> — левый верхний (70,180), правый нижний (230,280)</p>
     </div>
+    
+    <!-- Кнопки для навигации -->
     <div style="text-align: center; margin-top: 20px;">
         <button onclick="window.parent.info_frame.location.href='photo.html'" 
-                style="background: #4CAF50; color: white; border: none; padding: 8px 15px; margin: 2px; border-radius: 5px; cursor: pointer;">Фото</button>
+                style="background: #4CAF50; color: white; border: none; padding: 10px 20px; margin: 5px; border-radius: 5px; cursor: pointer;">📷 Фото</button>
         <button onclick="window.parent.info_frame.location.href='video.html'" 
-                style="background: #f44336; color: white; border: none; padding: 8px 15px; margin: 2px; border-radius: 5px; cursor: pointer;">Видео</button>
+                style="background: #f44336; color: white; border: none; padding: 10px 20px; margin: 5px; border-radius: 5px; cursor: pointer;">🎬 Видео</button>
         <button onclick="window.parent.info_frame.location.href='audio_gif.html'" 
-                style="background: #9c27b0; color: white; border: none; padding: 8px 15px; margin: 2px; border-radius: 5px; cursor: pointer;">Аудио/GIF</button>
+                style="background: #9c27b0; color: white; border: none; padding: 10px 20px; margin: 5px; border-radius: 5px; cursor: pointer;">🎵 Аудио/GIF</button>
     </div>
 </body>
 </html>
