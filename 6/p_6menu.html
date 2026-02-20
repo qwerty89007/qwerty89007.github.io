@@ -1,1 +1,68 @@
-
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Моё меню-карта</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', 'Arial', sans-serif;
+            background-color: #ffe6f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .контейнер {
+            background-color: white;
+            padding: 30px 20px;
+            border-radius: 30px;
+            box-shadow: 0 10px 20px rgba(255, 105, 180, 0.3);
+            text-align: center;
+            max-width: 500px;
+            border: 3px solid #ffb6c1;
+        }
+        h3 {
+            color: #ff69b4;
+            font-size: 28px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 0 #ffc0cb;
+        }        
+        img {
+            border-radius: 20px;
+            border: 4px solid #ffb6c1;
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+            max-width: 100%;
+            height: auto;
+        } 
+        p {
+            color: #d87093;
+            font-size: 18px;
+            background-color: #fff0f5;
+            padding: 10px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-bottom: 0;
+        }
+        p:hover {
+            background-color: #ffe4ec;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="контейнер">
+        <h3>Навигация по медиа</h3>
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='75' fill='%23ffcccc' /%3E%3Ctext x='10' y='45' font-family='Arial' font-size='30' fill='black'%3EВидео%3C/text%3E%3Crect y='75' width='400' height='75' fill='%23ccffcc' /%3E%3Ctext x='10' y='120' font-family='Arial' font-size='30' fill='black'%3EФото%3C/text%3E%3Crect y='150' width='400' height='75' fill='%23ccccff' /%3E%3Ctext x='10' y='195' font-family='Arial' font-size='30' fill='black'%3EАудио%3C/text%3E%3Crect y='225' width='400' height='75' fill='%23ffffcc' /%3E%3Ctext x='10' y='270' font-family='Arial' font-size='30' fill='black'%3EGIF%3C/text%3E%3C/svg%3E"
+             width="400" height="300" usemap="#menu" alt="Меню">
+        <map name="menu">
+            <area shape="rect" coords="0,0,400,75" href="info.html" target="info" alt="Видео">
+            <area shape="rect" coords="0,75,400,150" href="photo.html" target="info" alt="Фото">
+            <area shape="rect" coords="0,150,400,225" href="audio.html" target="info" alt="Аудио">
+            <area shape="rect" coords="0,225,400,300" href="gif.html" target="info" alt="GIF">
+        </map>
+        <p>Нажми на картинку!</p>
+    </div>
+</body>
+</html>
