@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Меню с картой изображений</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .info {
+            background-color: rgba(255,255,255,0.2);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Навигационное меню</h3>
+    <img src="https://via.placeholder.com/260x300/ffffff/333333?text=Нажми+на+иконку" 
+         alt="Навигационное меню" 
+         usemap="#navmap" 
+         width="260" 
+         height="300"
+         style="display: block; margin: 0 auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+    <map name="navmap">
+        <area shape="rect" coords="20,20,120,120" 
+              href="photo.html" target="info_frame" 
+              alt="Фотографии" title="Перейти к фотографиям">
+        <area shape="circle" coords="190,70,50" 
+              href="video.html" target="info_frame" 
+              alt="Видео" title="Перейти к видео">
+        <area shape="rect" coords="30,150,230,250" 
+              href="audio_gif.html" target="info_frame" 
+              alt="Аудио и GIF" title="Перейти к аудио и GIF">
+    </map>
+    
+    <div class="info">
+        <p><b>Как пользоваться:</b></p>
+        <p>Верхний левый квадрат — фотографии</p>
+        <p>Круг справа — видео</p>
+        <p>Нижний прямоугольник — аудио и GIF</p>
+        <p>Нажимай на области картинки!</p>
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+        <button onclick="window.parent.info_frame.location.href='photo.html'" 
+                style="background: #4CAF50; color: white; border: none; padding: 8px 15px; margin: 2px; border-radius: 5px; cursor: pointer;">Фото</button>
+        <button onclick="window.parent.info_frame.location.href='video.html'" 
+                style="background: #f44336; color: white; border: none; padding: 8px 15px; margin: 2px; border-radius: 5px; cursor: pointer;">Видео</button>
+        <button onclick="window.parent.info_frame.location.href='audio_gif.html'" 
+                style="background: #9c27b0; color: white; border: none; padding: 8px 15px; margin: 2px; border-radius: 5px; cursor: pointer;">Аудио/GIF</button>
+    </div>
+</body>
+</html>
