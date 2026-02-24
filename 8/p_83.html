@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семантическая верстка</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 10px;
+        }
+        header {
+            background: #ccc;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background: #333;
+            padding: 10px;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        article {
+            flex: 2;
+            padding: 10px;
+        }
+        aside {
+            flex: 1;
+            background: #eee;
+            padding: 10px;
+        }
+        footer {
+            background: #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        @media screen and (max-width: 600px) {
+            main {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>ШАПКА САЙТА</h2>
+    </header>    
+    <nav>
+        <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+    </nav>
+    <main>
+        <article>
+            <h3>ОСНОВНОЙ КОНТЕНТ</h3>
+            <p>Это текст основной части страницы. Здесь может быть любая информация.</p>
+            <p>Семантическая верстка использует теги: header, nav, main, article, aside, footer.</p>
+        </article>
+        <aside>
+            <h3>БОКОВАЯ ПАНЕЛЬ</h3>
+            <p>Дополнительная информация, реклама, ссылки.</p>
+        </aside>
+    </main>  
+    <footer>
+        <p>ПОДВАЛ САЙТА © 2024</p>
+    </footer>
+</body>
+</html>
