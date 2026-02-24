@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Табличная верстка</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        @media screen and (max-width: 600px) {
+            table, tr, td {
+                display: block;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Табличная верстка</h1> 
+    <table>
+        <tr>
+            <td colspan="2" style="background: #ccc; text-align: center;">
+                <h2>ШАПКА САЙТА</h2>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 200px; background: #eee;">
+                <h3>МЕНЮ</h3>
+                <ul>
+                    <li>Главная</li>
+                    <li>Новости</li>
+                    <li>Контакты</li>
+                </ul>
+            </td>
+            <td style="background: #fff;">
+                <h3>ОСНОВНОЙ КОНТЕНТ</h3>
+                <p>Это текст основной части страницы. Здесь может быть любая информация.</p>
+                <p>Табличная верстка использует теги table, tr, td.</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="background: #ccc; text-align: center;">
+                <p>ПОДВАЛ САЙТА © 2024</p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
