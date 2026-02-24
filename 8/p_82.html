@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блочная верстка</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 10px;
+        }
+        .header {
+            background: #ccc;
+            padding: 20px;
+            text-align: center;
+        }
+        .menu {
+            background: #eee;
+            padding: 10px;
+            width: 200px;
+            float: left;
+        }
+        .content {
+            background: #fff;
+            padding: 10px;
+            margin-left: 220px;
+        }
+        .footer {
+            background: #ccc;
+            padding: 10px;
+            text-align: center;
+            clear: both;
+            margin-top: 10px;
+        }
+        @media screen and (max-width: 600px) {
+            .menu, .content {
+                float: none;
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>ШАПКА САЙТА</h2>
+    </div>
+    <div class="menu">
+        <h3>МЕНЮ</h3>
+        <ul>
+            <li>Главная</li>
+            <li>Новости</li>
+            <li>Контакты</li>
+        </ul>
+    </div>
+    <div class="content">
+        <h3>ОСНОВНОЙ КОНТЕНТ</h3>
+        <p>Это текст основной части страницы. Здесь может быть любая информация.</p>
+        <p>Блочная верстка использует теги div и CSS свойства float.</p>
+    </div>   
+    <div class="footer">
+        <p>ПОДВАЛ САЙТА © 2024</p>
+    </div>
+</body>
+</html>
