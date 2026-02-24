@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Лабораторная работа 7</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .block {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .example {
+            background: #f0f0f0;
+            padding: 15px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Лабораторная работа №7</h1>
+    <div class="block">
+        <h2>1. z-index и clamp()</h2>       
+        <h3>z-index:</h3>
+        <div style="position: relative; height: 150px; background: #ddd;">
+            <div style="position: absolute; width: 100px; height: 100px; background: red; top: 20px; left: 20px; z-index: 1;">z=1</div>
+            <div style="position: absolute; width: 100px; height: 100px; background: green; top: 50px; left: 50px; z-index: 2;">z=2</div>
+            <div style="position: absolute; width: 100px; height: 100px; background: blue; top: 80px; left: 80px; z-index: 3;">z=3</div>
+        </div>       
+        <h3>clamp():</h3>
+        <div style="background: #eee; padding: 10px;">
+            <p style="font-size: clamp(12px, 4vw, 24px); border: 1px solid black;">
+                Этот текст меняет размер от 12px до 24px
+            </p>
+        </div>
+    </div>
+    <div class="block">
+        <h2>2. Position (4 вида)</h2>       
+        <div style="background: #ffcccc; padding: 10px; margin: 5px;">static (обычный блок)</div>       
+        <div style="position: relative; background: #ccffcc; padding: 10px; margin: 5px; top: 5px; left: 5px;">relative (сдвинут на 5px)</div>        
+        <div style="position: relative; height: 100px; background: #ccccff; padding: 10px;">
+        <div style="position: absolute; bottom: 10px; right: 10px; background: yellow;">absolute (внизу справа)</div>
+        </div>       
+        <div style="position: fixed; bottom: 10px; left: 10px; background: black; color: white; padding: 5px;">fixed (всегда тут)</div>
+    </div>
+    <div class="block">
+        <h2>3. Flexbox</h2>       
+        <h3>Простая flex-сетка:</h3>
+        <div style="display: flex; gap: 5px; background: #eee; padding: 10px;">
+            <div style="background: red; padding: 20px; flex: 1;">1</div>
+            <div style="background: green; padding: 20px; flex: 2;">2</div>
+            <div style="background: blue; padding: 20px; flex: 1;">3</div>
+        </div>        
+        <h3>Выравнивание:</h3>
+        <div style="display: flex; justify-content: space-around; background: #eee; padding: 10px;">
+            <div style="background: orange; padding: 10px;">левый</div>
+            <div style="background: orange; padding: 10px;">центр</div>
+            <div style="background: orange; padding: 10px;">правый</div>
+        </div>        
+        <h3>Колонка:</h3>
+        <div style="display: flex; flex-direction: column; gap: 5px; background: #eee; padding: 10px;">
+            <div style="background: purple; padding: 10px;">верх</div>
+            <div style="background: purple; padding: 10px;">середина</div>
+            <div style="background: purple; padding: 10px;">низ</div>
+        </div>
+    </div>
+    <div class="block">
+        <h2>4. Grid Layout</h2>
+        <h3>Свойства grid-контейнера:</h3>
+        <ul>
+            <li>display: grid - создает сетку</li>
+            <li>grid-template-columns - задает колонки</li>
+            <li>grid-template-rows - задает строки</li>
+            <li>gap - отступы между ячейками</li>
+        </ul>      
+        <h3>Свойства grid-элементов:</h3>
+        <ul>
+            <li>grid-column - сколько колонок занимает</li>
+            <li>grid-row - сколько строк занимает</li>
+        </ul>        
+        <h3>Пример сетки 2x2:</h3>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5px; background: #eee; padding: 10px;">
+            <div style="background: #ff6b6b; padding: 20px;">1</div>
+            <div style="background: #4ecdc4; padding: 20px;">2</div>
+            <div style="background: #ffe66d; padding: 20px;">3</div>
+            <div style="background: #95e1d3; padding: 20px;">4</div>
+        </div>      
+        <h3>Пример с объединением:</h3>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; background: #eee; padding: 10px;">
+            <div style="background: #f08a5d; padding: 20px; grid-column: span 2;">широкий (на 2 колонки)</div>
+            <div style="background: #b83b5e; padding: 20px;">узкий</div>
+            <div style="background: #6a2c70; padding: 20px;">1</div>
+            <div style="background: #f08a5d; padding: 20px;">2</div>
+            <div style="background: #b83b5e; padding: 20px;">3</div>
+        </div>
+    </div>   
+    <p><i>Студентка: Кобылина А.Ю., группа 24290907/3092</i></p>
+</body>
+</html>
