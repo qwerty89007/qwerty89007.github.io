@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторная 10 - Навигация и слайдеры</title>
+    <style>
+        body {
+            background: #f0f0f0;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            margin-top: 30px;
+            color: #333;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        .task {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Задание 2 - Навигация с выпадающим списком */
+        .nav {
+            background: #333;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+        }
+
+        .nav li {
+            position: relative;
+        }
+
+        .nav li a {
+            display: block;
+            padding: 15px 25px;
+            color: white;
+            text-decoration: none;
+            background: #333;
+        }
+
+        .nav li a:hover {
+            background: #555;
+        }
+
+        /* Выпадающий список */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            list-style: none;
+            padding: 0;
+        }
+
+        .dropdown-content li a {
+            padding: 12px 16px;
+            color: #333;
+            background: #f9f9f9;
+        }
+
+        .dropdown-content li a:hover {
+            background: #e0e0e0;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Задание 3 - Выезжающая боковая панель */
+        .sidebar-container {
+            position: relative;
+            height: 200px;
+            border: 1px dashed #999;
+            overflow: hidden;
+        }
+
+        .sidebar {
+            width: 200px;
+            height: 100%;
+            background: #4dabf7;
+            position: absolute;
+            left: -200px;
+            transition: left 0.5s ease;
+        }
+
+        .sidebar-content {
+            padding: 20px;
+            color: white;
+        }
+
+        .sidebar.active {
+            left: 0;
+        }
+
+        .toggle-btn {
+            margin: 10px 0;
+            padding: 8px 15px;
+            background: #4dabf7;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .toggle-btn:hover {
+            background: #339af0;
+        }
+
+        /* Задание 4 - Слайдер */
+        .slider {
+            width: 500px;
+            overflow: hidden;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+        }
+
+        .slides {
+            display: flex;
+            width: 300%;
+            animation: slide 9s infinite;
+        }
+
+        .slide {
+            width: 33.33%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .slide1 { background: #ff6b6b; }
+        .slide2 { background: #4dabf7; }
+        .slide3 { background: #51cf66; }
+
+        @keyframes slide {
+            0%, 25% { transform: translateX(0); }
+            33%, 58% { transform: translateX(-33.33%); }
+            66%, 91% { transform: translateX(-66.66%); }
+            100% { transform: translateX(0); }
+        }
+
+        /* Индикаторы слайдера */
+        .indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            gap: 10px;
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            background: #ccc;
+            border-radius: 50%;
+        }
+
+        .indicator:nth-child(1) { animation: indicator1 9s infinite; }
+        .indicator:nth-child(2) { animation: indicator2 9s infinite; }
+        .indicator:nth-child(3) { animation: indicator3 9s infinite; }
+
+        @keyframes indicator1 {
+            0%, 25% { background: #333; }
+            33%, 100% { background: #ccc; }
+        }
+
+        @keyframes indicator2 {
+            0%, 25% { background: #ccc; }
+            33%, 58% { background: #333; }
+            66%, 100% { background: #ccc; }
+        }
+
+        @keyframes indicator3 {
+            0%, 58% { background: #ccc; }
+            66%, 91% { background: #333; }
+            100% { background: #ccc; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Лабораторная работа №10</h1>
+    <p>Навигационные панели и слайдеры</p>
+
+    <!-- Задание 2 - Навигация с выпадающим списком -->
+    <div class="task">
+        <h2>1. Навигационная панель с выпадающим списком</h2>
+        <ul class="nav">
+            <li><a href="#">Главная</a></li>
+            <li class="dropdown">
+                <a href="#">Услуги ▼</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Веб-разработка</a></li>
+                    <li><a href="#">Дизайн</a></li>
+                    <li><a href="#">SEO</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Портфолио</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+        <p>При наведении на "Услуги" появляется выпадающий список</p>
+    </div>
+
+    <!-- Задание 3 - Выезжающая боковая панель -->
+    <div class="task">
+        <h2>2. Выезжающая боковая панель</h2>
+        <button class="toggle-btn" onclick="document.getElementById('sidebar').classList.toggle('active')">☰ Открыть панель</button>
+        <div class="sidebar-container">
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar-content">
+                    <h3>Меню</h3>
+                    <p>Главная</p>
+                    <p>О нас</p>
+                    <p>Контакты</p>
+                </div>
+            </div>
+        </div>
+        <p>Нажми на кнопку - панель выедет слева</p>
+    </div>
+
+    <!-- Задание 4 - Слайдер -->
+    <div class="task">
+        <h2>3. Слайдер с анимацией</h2>
+        <div class="slider">
+            <div class="slides">
+                <div class="slide slide1">Слайд 1</div>
+                <div class="slide slide2">Слайд 2</div>
+                <div class="slide slide3">Слайд 3</div>
+            </div>
+        </div>
+        <div class="indicators">
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+        </div>
+        <p>Слайдер автоматически переключается каждые 3 секунды</p>
+    </div>
+</body>
+</html>
